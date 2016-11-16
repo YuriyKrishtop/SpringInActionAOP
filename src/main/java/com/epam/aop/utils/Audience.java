@@ -46,7 +46,7 @@ public class Audience {
 
     @Before("saying(word)")
     public void interceptWord(String word) {
-        System.out.println(word);
+        System.out.println("Performer will say: " + word);
     }
 
 }

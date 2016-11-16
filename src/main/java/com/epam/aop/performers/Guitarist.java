@@ -20,6 +20,6 @@ public class Guitarist implements Performer {
     }
 
     public void say(String word){
-        System.out.println("Say: " + word);
+        System.out.println("Guitarist is saying: " + word);
     }
 }
