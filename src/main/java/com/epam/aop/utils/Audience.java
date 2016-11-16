@@ -1,7 +1,11 @@
 package com.epam.aop.utils;
 
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.*;
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -35,4 +39,14 @@ public class Audience {
         System.out.println("******************************");
         System.out.println("Duration: " + (finish - start) + " msec" );
     }
+
+    @Pointcut("execution(* com.epam.aop.performers.Performer.say(String))&& args(word)")
+    public void saying(String word){
+    }
+
+    @Before("saying(word)")
+    public void interceptWord(String word) {
+        System.out.println(word);
+    }
+
 }

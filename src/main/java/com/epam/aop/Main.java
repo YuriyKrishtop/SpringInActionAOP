@@ -10,5 +10,6 @@ public class Main {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("springConfig.xml");
         Performer guitarist =  applicationContext.getBean("guitarist", Performer.class);
         guitarist.perform();
+        guitarist.say("Hello!");
     }
 }

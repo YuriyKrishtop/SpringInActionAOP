@@ -18,4 +18,8 @@ public class Guitarist implements Performer {
         }
         instrument.play();
     }
+
+    public void say(String word){
+        System.out.println("Say: " + word);
+    }
 }
