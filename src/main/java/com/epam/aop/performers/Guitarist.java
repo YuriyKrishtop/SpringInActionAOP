@@ -19,7 +19,7 @@ public class Guitarist implements Performer {
         instrument.play();
     }
 
-    public void say(String word){
+    public void say(String word) {
         System.out.println("Guitarist is saying: " + word);
     }
 }

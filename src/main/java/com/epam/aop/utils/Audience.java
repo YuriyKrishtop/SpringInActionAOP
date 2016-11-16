@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class Audience {
 
     @Pointcut("execution(* com.epam.aop.performers.Performer.perform(..))")
-    public void performance(){
+    public void performance() {
     }
 
     @Before("performance()")
@@ -37,11 +37,11 @@ public class Audience {
         }
         long finish = System.currentTimeMillis();
         System.out.println("******************************");
-        System.out.println("Duration: " + (finish - start) + " msec" );
+        System.out.println("Duration: " + (finish - start) + " msec");
     }
 
     @Pointcut("execution(* com.epam.aop.performers.Performer.say(String))&& args(word)")
-    public void saying(String word){
+    public void saying(String word) {
     }
 
     @Before("saying(word)")

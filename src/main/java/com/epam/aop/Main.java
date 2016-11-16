@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("springConfig.xml");
-        Performer guitarist =  applicationContext.getBean("guitarist", Performer.class);
+        Performer guitarist = applicationContext.getBean("guitarist", Performer.class);
         guitarist.perform();
         guitarist.say("Hello!");
     }
