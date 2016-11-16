@@ -1,11 +1,9 @@
 package com.mkyong.core;
 
-import com.epam.aop.performers.Guitarist;
 import com.epam.aop.performers.Performer;
+import com.mkyong.customer.bo.CustomerBo;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import com.mkyong.customer.bo.CustomerBo;
 
 public class App {
 	public static void main(String[] args) throws Exception {
@@ -15,7 +13,7 @@ public class App {
 		customer.addCustomer();
 
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("springConfig.xml");
-		Performer guitarist = (Guitarist) applicationContext.getBean("performer");
+		Performer guitarist = (Performer) applicationContext.getBean("performer");
 		guitarist.perform();
 		
 		//customer.addCustomerReturnValue();
